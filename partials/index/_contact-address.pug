@@ -1,0 +1,20 @@
+.contact-address
+    .container
+        .row.justify-content-center
+            .col-lg-5.col-sm-12.col-xs-12
+                .address
+                    each item in addesinfo
+                        .single_address.d-flex
+                            .address-icon
+                                i.social-icon(class=`icon-${item.icon}`)
+                            .address-text
+                                h3= item.title
+                                p= item.description
+
+            .col-lg-5.col-sm-12.col-xs-12
+                .map
+                  iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414113.2129174544!2d51.77283525466918!3d35.8181089519969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e05f14914b62d%3A0x4a55a002ca000ad7!2z2KfYs9iq2KfZhiDYqtmH2LHYp9mG2Iwg2K7bjNin2KjYp9mGINio2Yjaqdin2YbYjCDYp9uM2LHYp9mG!5e0!3m2!1sfa!2s!4v1685613591455!5m2!1sfa!2s")
+
+
+
+

@@ -1,0 +1,10 @@
+.popular.py-5
+    .container
+      .row
+        .line.position-relative
+           h2.text-center دسته بندی ها
+        .popular-s.py-5.row.owl-carousel.owl-theme.popularSlider
+          each item in populatInfo
+            +popular(item)
+
+

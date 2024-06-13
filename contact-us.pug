@@ -1,0 +1,183 @@
+extends partials/_layout
+
+block style
+    <!-- contact us styles. -->
+    link(rel="stylesheet" href="assets/styles/pages.css?v=" + new Date().getTime() )
+    //link(rel="stylesheet" href="assets/styles/pages.min.css?v=" + new Date().getTime() )
+
+block header
+    include partials/header/_header
+
+block content
+    - let info = breadCrumbInfo.contactUs
+    include partials/UI-helper/_breadcrumb
+    +breadCrumb(info)
+    section.contact-us.page
+        .container
+            h1.titles= info[0].text
+            .page-item
+                .row
+
+                    .col-12.col-lg-6
+                        h2.contact-us__sub-title فرم تماس
+                        form#contactUsForm.validate-form.form-card
+                            .form-card__field
+                                label(for="name").form-card__label نام
+                                input(type="text" name="name" placeholder='نام و نام خانوادگی خود را وارد نمایید' required )#name.form-card__input
+                            .form-card__field
+                                label(for="email").form-card__label ایمیل
+                                input(type="email" name="email" placeholder='ایمیل خود را وارد کنید'  )#email.form-card__input
+                            .form-card__field.mySelectOption
+                            .form-group.select-option
+                                label.form-card__label  موضوع
+                                .custom-select
+                                    select
+                                        option(value="0") انتخاب موضوع ...
+                                        option(value="1" disabled="disabled") 1
+                                        option(value="2") 2
+                                        option(value="3") 3
+
+                            .form-card__field
+                                label(for="code").form-card__label کد امنیتی
+                                input(type="text" name="captcha" placeholder='کد امنیتی' required)#code.form-card__input
+                                .captcha
+                                    a.captcha__link(href='#')
+                                        span.icon-reload
+                                    img.captcha__img(title='Captcha', src='assets/images/content/captcha.png', alt='کد امنیتی')
+                            .form-card__field
+                                label(for="textt").form-card__label.form-card__label-textarae متن نقد و بررسی شما
+                                textarea( name="messageBox" rows="4" placeholder='متن نقد و بررسی شما' required)#textt.form-card__input
+                            .form-card__button
+                                button.main-btn.main-btn-primary(type="submit")
+                                    span.main-btn__text ارسال پیام
+                    .col-12.col-lg-6.contact-info
+                        h2.contact-info__title راه های ارتباطی
+                        ul.contact-info__list
+                            li.contact-info__list-item
+                                span.contact-info__list-icon.icon-map
+                                p.contact-info__list-text= siteInfo.contact.address
+                            li.contact-info__list-item
+                                span.contact-info__list-icon.icon-phone
+                                a.contact-info__list-text(href=`tel:${siteInfo.contact.phone.replaceAll(" ", "").replaceAll("-", "")}`)
+                                    bdi= siteInfo.contact.phone
+                            li.contact-info__list-item
+                                span.contact-info__list-icon.icon-mobile
+                                a.contact-info__list-text(href=`tel:${siteInfo.contact.mobile.replaceAll(" ", "").replaceAll("-", "")}`)
+                                    bdi= siteInfo.contact.mobile
+                            li.contact-info__list-item
+                                span.contact-info__list-icon.icon-email
+                                a.contact-info__list-text(href=`mailto:${siteInfo.contact.email}`)= siteInfo.contact.email
+                            li.contact-social
+                                span.contact-social__text شبکه های اجتماعی:
+                                ul.social-media
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی اینستاگرام")
+                                            i.social-media__icon.instagram.icon-instagram
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی اینستاگرام")
+                                            i.social-media__icon.instagram.icon-instagram-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی تلگرام")
+                                            i.social-media__icon.telegram.icon-telegram
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی تلگرام")
+                                            i.social-media__icon.telegram-out.icon-telegram-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی تلگرام")
+                                            i.social-media__icon.telegram-out.icon-telegram-circle
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی تلگرام")
+                                            i.social-media__icon.telegram-out.icon-telegram-original
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی تلگرام")
+                                            i.social-media__icon.telegram-out.icon-telegram-original-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی توییتر")
+                                            i.social-media__icon.twitter.icon-twitter
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی توییتر")
+                                            i.social-media__icon.twitter.icon-twitter-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی واتساپ")
+                                            i.social-media__icon.whatsapp.icon-whatsapp
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی واتساپ")
+                                            i.social-media__icon.whatsapp.icon-whatsapp-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی یوتیوب")
+                                            i.social-media__icon.youtube.icon-youtube
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی یوتیوب")
+                                            i.social-media__icon.youtube.icon-youtube-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی اسکایپ")
+                                            i.social-media__icon.skype.icon-skype
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی اسکایپ")
+                                            i.social-media__icon.skype.icon-skype-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی فیس بوک")
+                                            i.social-media__icon.facebook.icon-facebook
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی فیس بوک")
+                                            i.social-media__icon.facebook.icon-facebook-square
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی پینترست")
+                                            i.social-media__icon.pinterest.icon-pinterest
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی پینترست")
+                                            i.social-media__icon.pinterest.icon-pinterest-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی لینکداین")
+                                            i.social-media__icon.linkedin.icon-linkedin-square
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی لینکداین")
+                                            i.social-media__icon.linkedin.icon-linkedin-square-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی لینکداین")
+                                            i.social-media__icon.linkedin.icon-linkedin
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی لینکداین")
+                                            i.social-media__icon.linkedin.icon-linkedin-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی گوگل پلاس")
+                                            i.social-media__icon.google-plus.icon-google-outline
+
+                                    li.social-media__item
+                                        a(href="#" title="شبکه اجتماعی گوگل پلاس")
+                                            i.social-media__icon.google-plus.icon-circle-google-plus
+                        .contact-us__img
+                            img.img-fluid(src="assets/images/content/contact.svg" alt="pic" title="pic")
+                .col-12
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d827.0175361900673!2d51.439173829210375!3d33.99073199878891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU5JzI2LjYiTiA1McKwMjYnMjMuMCJF!5e0!3m2!1sen!2sir!4v1462168333926" allowfullscreen="")
+
+
+block footer
+    include partials/footer/_footer
+
+block script
+    <!-- contact us scripts. -->
+    script(src="assets/scripts/js/custom-select.min.js")

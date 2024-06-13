@@ -1,0 +1,105 @@
+.modal {
+  .modal-content {
+    border-radius: calc(#{$border-radius}*2.5);
+    overflow: hidden;
+
+  } /* modal modal content */
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    #{$left}: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: auto;
+    height: auto;
+    z-index: 3;
+
+    &:hover {
+      span {
+        color: $title-color;
+      }
+    }
+
+    span {
+      color: $object-color;
+      font-size:30px;
+      transition: $transition;
+    }
+
+  } /* modal close */
+
+  .modal__title {
+    border-bottom: 1px solid darken($light-color, 15%);
+    font-size: 16px;
+    font-weight: bold;
+    color: $title-color;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+  } /* modal title */
+
+  .modal-body {
+    padding: 30px;
+    .main-btn {
+      padding: 10px 20px;
+    } /* modal body main btn */
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid darken($light-color, 15%);
+      margin: 0  0 0 30px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 300;
+      color: $text-color;
+      height: 42px;
+      width: 100%;
+      background: transparent;
+
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: lighten($text-color, 10%);
+        font-size: 12px;
+        font-weight: 300;
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: lighten($text-color, 10%);
+        font-size: 14px;
+        font-weight: 300;
+      }
+      &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: lighten($text-color, 10%);
+        font-size: 14px;
+        font-weight: 300;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: lighten($text-color, 10%);
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+    }
+
+    textarea {
+      height: 133px;
+      resize: none;
+    }
+
+    label {
+      font-size: 12px;
+    }
+
+  } /* modal modal body */
+
+  &__button {
+    width: 100%;
+    padding: 15px !important;
+
+  } /* modal button */
+
+} /* modal */

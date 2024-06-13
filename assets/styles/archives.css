@@ -1,0 +1,68 @@
+/*
+// TODO: adding all archive pages styles to this file.
+         such as blog archive card, product archive card and etc.
+*/
+/*---------------------------------- fonts ----------------------------------*/
+/*---------------------------------- ellipsis ----------------------------------*/
+/*---------------------------------- line text ----------------------------------*/
+/*---------------------------------- text gradient ----------------------------------*/
+/*---------------------------------- glass effect ----------------------------------*/
+/*---------------------------------- card shadow ----------------------------------*/
+/*---------------------------------- font icon ----------------------------------*/
+/*---------------------------------- overlay ----------------------------------*/
+/*---------------------------------- border radius ----------------------------------*/
+/*---------------------------------- line ----------------------------------*/
+/*---------------------------------- background image ----------------------------------*/
+/*---------------------------------- scroll bar ----------------------------------*/
+/*---------------------------------- media query ----------------------------------*/
+/*---------------------------------- flex ----------------------------------*/
+/*---------------------------------- Second Language ----------------------------------*/
+.bolg-archive .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 10%;
+  height: 2px;
+  background: #9c27b0;
+  inset-inline-end: 50%;
+  transform: translate(-50%);
+}
+.bolg-archive .article {
+  background: #f4f5f8;
+  padding: 0;
+  transition: all 0.9s ease;
+}
+.bolg-archive .article:hover {
+  transform: translateY(-20px);
+  transition: all 0.9s ease;
+}
+.bolg-archive .article .article-wrapper .text-blog {
+  padding: 20px;
+}
+.bolg-archive .article .article-wrapper .text-blog h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  margin-bottom: 2px;
+}
+.bolg-archive .article .article-wrapper .img-blog {
+  width: 100%;
+}
+.bolg-archive .article .article-wrapper .img-blog img {
+  width: 100%;
+  max-width: 100%;
+}
+.bolg-archive .button-blog {
+  padding: 12px;
+  background: #9c27b0;
+  border-radius: 16px;
+  color: white;
+  font-size: 12px;
+  transition: all 0.2s ease 0s;
+}
+.bolg-archive .button-blog:hover {
+  background: #623f6e;
+}
+
+/*# sourceMappingURL=archives.css.map */

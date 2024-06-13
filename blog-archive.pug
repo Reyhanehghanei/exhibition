@@ -1,0 +1,38 @@
+extends partials/_layout
+
+block style
+    <!-- blog archive styles. -->
+    link(rel="stylesheet" href="assets/styles/archives.css?v=" + new Date().getTime() )
+    //link(rel="stylesheet" href="assets/styles/archives.min.css?v=" + new Date().getTime() )
+
+block header
+    include partials/header/_header
+block content
+    .bolg-archive
+        .row
+            .line.position-relative
+                h1.text-center ارشیو مقالات
+            div.article-card
+                .row.justify-content-center.gap-4.mt-5.py-5
+                    each item in blog
+                        +blog(item)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+block footer
+    include partials/footer/_footer

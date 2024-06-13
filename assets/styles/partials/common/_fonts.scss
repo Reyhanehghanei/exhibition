@@ -1,0 +1,19 @@
+/* ------------------------- fa en font -----------------------*/
+@include font("iranyekan","iranyekanwebboldfanum","iranyekan",bold);
+@include font("iranyekan","iranyekanwebthinfanum","iranyekan",100);
+@include font("iranyekan","iranyekanweblightfanum","iranyekan",300);
+@include font("iranyekan","iranyekanwebregularfanum","iranyekan",normal);
+@include font("iranyekan","iranyekanwebmediumfanum","iranyekan",500);
+@include font("iranyekan","iranyekanwebextraboldfanum","iranyekan",800);
+@include font("iranyekan","iranyekanwebblackfanum","iranyekan",900);
+@include font("iranyekan","iranyekanwebextrablackfanum","iranyekan",950);
+
+
+@include fontTW("iranyekan-en","iranyekanwebbold","iranyekan-en",bold);
+@include fontTW("iranyekan-en","iranyekanwebthin","iranyekan-en",100);
+@include fontTW("iranyekan-en","iranyekanweblight","iranyekan-en",300);
+@include fontTW("iranyekan-en","iranyekanwebregular","iranyekan-en",normal);
+@include fontTW("iranyekan=en","iranyekanwebmedium","iranyekan-en",500);
+@include fontTW("iranyekan-en","iranyekanwebextrabold","iranyekan-en",800);
+@include fontTW("iranyekan-en","iranyekanwebblack","iranyekan-en",900);
+@include fontTW("iranyekan-en","iranyekanwebextrablack","iranyekan-en",950);

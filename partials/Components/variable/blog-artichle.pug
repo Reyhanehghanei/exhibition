@@ -1,0 +1,8 @@
+mixin blog(cardInfo)
+    .article.col-md-3
+        .article-wrapper
+            .img-blog
+                img.img-category(src=cardInfo.img)
+                .text-blog
+                    h2.text-center= cardInfo.title
+                    p.text-center.title=cardInfo.description

@@ -1,0 +1,28 @@
+.about {
+  background: #f6f6f6;
+}
+.about h1 {
+  font-weight: 800;
+  font-size: 30px;
+}
+.about p {
+  font-size: 15px;
+}
+.about .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 10%;
+  height: 2px;
+  background: #9c27b0;
+  inset-inline-end: 50%;
+  transform: translate(-50%);
+}
+.about .article-about img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=about.css.map */

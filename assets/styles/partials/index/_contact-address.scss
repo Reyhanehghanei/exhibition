@@ -1,0 +1,48 @@
+.contact-address{
+  background: #e0eff4;
+  padding: 80px 0;
+   .address {
+     background: #fff;
+     padding: 60px 30px;
+     .single_address{
+       .address-icon{
+         color: #fff;
+         font-size: 22px;
+         margin-#{$left}: 20px;
+         margin-bottom: 50px;
+         background: #9c27b0;
+         width: 60px;
+         height: 60px;
+         line-height: 60px;
+         text-align: center;
+         padding: 0px 14px;
+         border-radius: 30px;
+         text-align: -webkit-center;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         i{
+         font-size: 35px;
+         }
+         }
+       .address-text{
+         h3{
+           color: darkblue;
+         }
+       }
+     }
+   }
+  .map{
+    border: 0;
+    width: 100%;
+    height: 453px;
+    background: #fff;
+    padding: 10px;
+    iframe{
+      width: 100%;
+      height: 100%;
+
+    }
+
+  }
+}

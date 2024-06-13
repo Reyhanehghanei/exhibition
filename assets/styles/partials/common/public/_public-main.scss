@@ -1,0 +1,63 @@
+body {
+  font-family: "iranyekan";
+  font-weight: normal;
+  //background-color: $main-background;
+  text-align: $right;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+a, button, input, textarea, a:focus, .page-link, .page-link:focus {
+  outline: none !important;
+  resize: none;
+  text-decoration: none;
+  box-shadow: 0 0 0;
+}
+/*-------------------------------------- selection --------------------------------------*/
+::selection {
+  background: $primary-light-color;
+  color: $light-color;
+}
+
+::-webkit-selection {
+  background: $primary-light-color;
+  color: $light-color;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9e9e9e;
+}
+
+::-webkit-scrollbar-track {
+  background: #dadada;
+}
+
+/*-------------------------------------- remove autoComplete default background --------------------------------------*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px $light-color inset !important;
+}
+
+/*-------------------------------------- changing bootstrap default styles --------------------------------------*/
+[class*="text-primary"] {
+  color: $primary-color !important;
+}
+
+.tooltip {
+  font-family: 'iranyekan';
+}

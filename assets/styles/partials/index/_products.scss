@@ -1,0 +1,44 @@
+.products {
+  .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 10%;
+    height: 2px;
+    background: #9c27b0;
+    inset-inline-end: 50%;
+    transform: translate(-50%);
+  }
+
+  h4 {
+    font-weight: 800;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .products-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+    @media only screen and (max-width:$small) {
+      grid-template-columns: 1fr;
+    }
+    p{
+      color: #FFFFFF;
+      text-align: center;
+    }
+    .box-w{
+      height: 40.5rem;
+    }
+    .popular-a{
+      background: unset;
+      border: 0;
+      text-align: center;
+    }
+  }
+
+}

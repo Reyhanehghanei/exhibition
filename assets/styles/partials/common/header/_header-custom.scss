@@ -1,0 +1,11 @@
+#main-header {
+  padding: 10px 0;
+  background-color: $header-background;
+  box-shadow: $header-box-shadow;
+  margin-bottom: 35px;
+  
+  .main-header-wrapper {
+    align-items: center;
+    justify-content: space-between;
+  } /* main header main header wrapper */
+} /* main header */

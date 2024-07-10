@@ -1,0 +1,18 @@
+#main-header {
+  margin-bottom: 5px;
+  
+  .main-header-wrapper {
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width:1300px) {
+      align-items: unset;
+      justify-content: start;
+      margin-bottom: 3rem;
+      flex-direction: column;
+    }
+  } /* main header main header wrapper */
+} /* main header */
+
+
+

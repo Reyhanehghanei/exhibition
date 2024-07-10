@@ -1,0 +1,192 @@
+include partials/Components/_layout-component
+
+doctype html
+html(dir="rtl" lang="fa")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0,minimum-scale=1.0')
+        title= siteInfo.title
+        meta(name='Designer_UI' content='Ali_God')
+        link(href="dist/images/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon")
+        link(rel='apple-touch-icon', sizes='180x180', href='assets/images/favicon/apple-touch-icon.webp')
+        link(rel='icon', type='image/webp', sizes='32x32', href='assets/images/favicon/favicon-32x32.webp')
+        link(rel='icon', type='image/webp', sizes='32x32', href='assets/images/favicon/favicon-192x192.webp')
+        link(rel='icon', type='image/webp', sizes='16x16', href='assets/images/favicon/favicon-16x16.webp')
+        meta(name='theme-color', content=siteInfo.color)
+        link(rel="stylesheet" href="assets/styles/common.css?v=" + new Date().getTime() )
+        //link(rel="stylesheet" href="assets/styles/common.min.css?v=" + new Date().getTime() )
+        block style
+        style.
+
+            #icons {
+                margin: 50px 0;
+            }
+
+            .wrapper-icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row-reverse;
+                gap: 5px;
+                border-radius: 10px;
+                background-color: white;
+                font-size: 20px;
+                font-weight: 800;
+                box-shadow: none;
+                transition: all 350ms linear;
+                cursor: pointer;
+                overflow: hidden;
+            }
+
+            .wrapper-icon::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                transition: all 350ms linear;
+                z-index: 2;
+            }
+
+            .wrapper-icon::after {
+                content: "آیکون مد نظر با موفقیت کپی شد";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1.2);
+                text-align: center;
+                font-size: 16px;
+                font-weight: 800;
+                color: #2ef400;
+                transition: all 350ms linear;
+                opacity: 0;
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            .wrapper-icon.active::before {
+                left: 0;
+            }
+
+            .wrapper-icon.active::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            .wrapper-icon:hover {
+                background-color: #f1f1f1;
+                box-shadow: 0 2px 8px #00000020;
+            }
+            .wrapper-icon:hover [class^='icon-'] {
+                transform: scale(1.2);
+            }
+
+            .wrapper-icon * {
+                padding: 20px;
+            }
+
+            .wrapper-icon span {
+                font-family: cursive;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .wrapper-icon [class^="icon-"] {
+                font-size: 25px;
+                font-weight: normal;
+                margin-left: auto;
+                border-left: 1px solid #f1f1f1;
+                transition: all 350ms linear;
+            }
+
+            .search-wrapper {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .search-wrapper label {
+                font-size: 16px;
+                font-weight: 800;
+                color: #333;
+                margin-left: 10px;
+            }
+
+            .search-wrapper #icon-search {
+                outline: none !important;
+                display: inline-block;
+                min-width: 350px;
+                border: 1px solid #d6d6d6;
+                box-shadow: none;
+                color: #333;
+                background-color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 15px;
+                border-radius: 10px;
+                transition: all 350ms linear;
+            }
+
+            .search-wrapper #icon-search::placeholder {
+                font-size: 14px;
+                font-weight: 400;
+                color: #555;
+            }
+
+            .search-wrapper #icon-search:focus,
+            .search-wrapper #icon-search:hover {
+                box-shadow: 0 0 2px 0 #000000;
+            }
+
+            .not-found {
+                width: 100%;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: #ffefef;
+                box-shadow: 0 2px 8px #00000035;
+                border-right: 4.5px solid #ff4141;
+                display: none;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+
+            .not-found.active {
+                display: flex;
+            }
+
+            .not-found [class^='icon-'] {
+                font-size: 35px;
+                color: #ff4141;
+            }
+
+            .not-found span {
+                font-size: 20px;
+                font-weight: 750;
+                color: #ff4141;
+            }
+
+            .not-found__result {
+                color: #333 !important;
+            }
+
+    body
+        include partials/header/_header
+
+        main
+
+            .search-wrapper
+                label(for="icon-search") جست و جوی آیکون :
+                input#icon-search(type="text" placeholder="آیکون مورد نظر خود را جست و جو کنید...")
+
+            section#icons
+                .container
+                    .row.g-4
+
+        include partials/footer/_footer
+        script(src="assets/scripts/js/jquery.min.js")
+        script(type="module" src="assets/scripts/icons.js")

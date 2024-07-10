@@ -1,0 +1,42 @@
+extends partials/_layout
+
+block style
+   <!-- index styles. -->
+
+    link(rel="stylesheet" href="assets/styles/css/jquery.bxslider.min.css")
+    link(rel="stylesheet" href="assets/styles/css/owl.carousel.min.css")
+    link(rel="stylesheet" href="assets/styles/css/owl.theme.default.min.css")
+    link(rel="stylesheet" href="assets/styles/index.css?v=" + new Date().getTime() )
+
+    //link(rel="stylesheet" href="assets/styles/index.min.css?v=" + new Date().getTime() )
+
+block header
+    include partials/header/_header
+
+
+block content
+    include partials/Components/_index-components
+    include partials/index/_main-slider
+    include partials/index/products
+    include partials/index/_Popular
+    include partials/index/_promotion-content
+    //include partials/index/_contact-us
+    include partials/index/_blog
+    //include partials/index/_buy-now
+    //include partials/index/_about-us
+    //include partials/index/_contact-address
+    //include partials/index/_newsletter
+
+block footer
+    include partials/footer/_footer
+
+block script
+    <!-- index scripts. -->
+
+
+    script(src="assets/scripts/js/jquery.min.js")
+    script(src="assets/scripts/js/owl.carousel.min.js")
+    script(src="assets/scripts/js/jquery.bxslider.min.js")
+
+
+

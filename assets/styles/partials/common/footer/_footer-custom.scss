@@ -1,0 +1,16 @@
+#main-footer {
+  position: relative;
+  padding: 10px 0;
+  padding-bottom: 4px;
+  background: $footer-background;
+  @include border-radius(100px,100px,0,0);
+  @media only screen and (max-width: 575.98px) {
+    padding-top: 20px;
+  }
+
+  .main-footer-wrapper {
+    justify-content: flex-start;
+
+  } /* main footer main footer wrapper */
+
+} /* main footer */

@@ -1,0 +1,79 @@
+.contact-us {
+  padding: 80px 0;
+  background: #e0eff4;
+  .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 10%;
+    height: 2px;
+    background: #9fbbb1;
+    inset-inline-end: 50%;
+    transform: translate(-50%);
+  }
+  h2{
+    font-size: 35px;
+    font-weight: 700;
+  }
+  p{
+    font-size: 15px;
+  }
+  .contact_image{
+    width: 100%;
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .contact{
+    padding: 60px;
+    background: #FFFFFF;
+    input{
+      background: #f5f8fa;
+      border: 2px solid #f5f8fa;
+      border-radius: 2px;
+      box-shadow: none;
+      color: #1d293e;
+      font-size: 16px;
+      font-weight: 400;
+      height: 52px;
+      padding: 10px 10px 10px 30px;
+      width: 100%;
+      &:focus{
+        border: 2px solid #874291;
+      }
+    }
+    textarea{
+      background: #f5f8fa;
+      border: 2px solid #f5f8fa;
+      border-radius: 2px;
+      box-shadow: none;
+      color: #1d293e;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px 10px 10px 30px;
+      width: 100%;
+      &:focus{
+        border: 2px solid #874291;
+      }
+    }
+    .btn-contact-bg{
+      background: #9c27b0 none repeat scroll 0 0;
+      border-radius: 7px;
+      color: #fff;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      outline: medium none;
+      padding: 15px 27px;
+      text-transform: uppercase;
+      transition: all 0.2s ease 0s;
+      &:hover{
+        background: #623f6e;
+      }
+    }
+  }
+
+}

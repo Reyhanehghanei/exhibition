@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "simplebar": "^5.3.8",
+    "smooth-scrollbar": "^8.7.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-pug": "^3.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.2.1",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "server": "http-server -o -c-1 -p 8020"
+  },
+  "name": "exhibition",
+  "description": "This repository has been complied by <a href=\"https://github.com/AliGod8001\"><b>Ali_God</b></a> © from 2022 to make your work as a Front-end developer easier.<br/>\r and this is a repository for starting project in Itsa company.",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

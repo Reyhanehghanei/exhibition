@@ -1,0 +1,47 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 11px;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5.5px;
+
+    .title {
+      font-size: 15.8px;
+      font-weight: 700;
+      color: #474772;
+    }
+    
+    .text {
+      font-size: 13.5px;
+      color: #7f7171;
+    }
+  } /* header logo name */
+  img{
+    width: 32%;
+  }
+.logo-heder{
+  span{
+    font-size: 16.3px;
+    font-weight: 800;
+    color: #333;
+  }
+  p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #6e6e6e;
+  }
+}
+} /* header logo */
+.search-button-item{
+  span{
+color: #FFFFFF;
+  }
+}
+

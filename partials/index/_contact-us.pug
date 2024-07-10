@@ -1,0 +1,29 @@
+.contact-us
+    .container
+        .row.gap-4.justify-content-md-center.col-md-12
+            .line.position-relative
+                h2.mt-4.text-center در تماس باشید
+            p.text-center این قالب یک ، قالب حرفه ای می باشد.
+        .row
+            .col-lg-6.col-sm-12.col-xs-12
+                .contact_image
+                    img(src='assets/images/content/contact.png')
+            .col-lg-6.col-sm-12.col-xs-12
+                .contact.mt-5
+                    form(role='form' method='GET')
+                        .row
+                            .form-group.col-md-6
+                                input.form-control(type='text' placeholder='نام')
+                            .form-group.col-md-6
+                                input.form-control(type='email' placeholder='ایمیل')
+                            .form-group.col-md-12
+                                input.form-control(type='text' placeholder='موضوع')
+                            .form-group.col-md-12
+                                textarea.form-control(rows='6' name='message' placeholder='پیام شما' )
+                            .col-md-12.text-center
+                                input.btn-contact-bg(type='submit'
+                                value='ارسال پیام ')
+
+
+
+

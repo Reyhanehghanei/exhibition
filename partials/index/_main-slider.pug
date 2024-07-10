@@ -1,0 +1,59 @@
+.index-sec.main-slider-sec
+    .container
+        .swiper-container
+            // Additional required wrapper
+            .swiper-wrapper
+                // Slides
+                .swiper-slide.slide-1
+                    //img size => 1800 * 850
+                    picture
+                        source(media="(max-width: 575.98px)" srcset="assets/images/slider/01.png")
+                        source(media="(max-width: 991.98px)" srcset="assets/images/slider/01.png")
+                        img.lazyload(src="assets/images/slider/01.png" data-src="assets/images/slider/01.png")
+
+                    .slider-container
+                        .animated-area
+                            h2.slider-title عنوان اسلایدر اول سایت
+                        h4.slider-sub-title ند فرش "نقش دلربا" شروع به فعالیت نمود و در زمان خود با کیفیت ترین تولیدات را به بازار عرضه کرد.به تدریج با پیشرفت تکنولوژی ،ا
+                .swiper-slide.slide-2
+                    picture
+                        source(media="(max-width: 575.98px)" srcset="assets/images/slider/02.png")
+                        source(media="(max-width: 991.98px)" srcset="assets/images/slider/02.png")
+                        img.lazyload(src="assets/images/slider/02.png" data-src="assets/images/slider/02.png")
+                    .slider-container
+                        .animated-area
+                            h2.slider-title فرش در صدها طرح و رنگ مختلف
+                        h4.slider-sub-title شرکت فرش خاطره ی کویر کاشان با ربع قرن تجربه در سال 1370 با برند فرش "نقش دلربا" شروع به فعالیت نمود و در زمان خود با کیفیت ترین تولیدات را به بازار عرضه کرد.به تدریج با پیشرفت تکنولوژی ،اقدام به خرید به روزترین
+
+            .swiper-pagination
+            // If we need navigation buttons
+            .swiper-button-prev
+            .swiper-button-next
+            .img-slider
+                img.img-slider-a(src='assets/images/slider/26.png')
+
+
+
+        block script
+            script.
+                var mySwiper = new Swiper('.swiper-container', {
+
+                    loop: true,
+                    spaceBetween: 50,
+                    speed: 1000,
+                    effect: 'fade',
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }
+                })
+
+
+ 

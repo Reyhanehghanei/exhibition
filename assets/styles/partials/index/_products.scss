@@ -1,0 +1,132 @@
+.products {
+  .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 10%;
+    height: 2px;
+    background: $bluee;
+    inset-inline-end: 50%;
+    transform: translate(-50%);
+
+  }
+
+  h4 {
+    font-weight: 800;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+  }
+
+  .products-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    @media only screen and (max-width:$small) {
+      grid-template-columns: 1fr;
+    }
+    p{
+      color: #FFFFFF;
+
+    }
+    .box-w{
+      height: 651px;
+      &:hover .popular-a {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s ease;
+        transform: translateY(20px);
+      }
+    }
+    .popular-a{
+      background: unset;
+      border: 0;
+    }
+  }
+
+  }
+
+.products-box{
+  &:hover{
+    background: #494c4f;
+    border-radius: 3px;
+  }
+  p{
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 13px;
+    text-transform: capitalize;
+    font-weight: 700;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+    top: 10rem;
+  }
+  &:hover p{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+  }
+  h3{
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 13px;
+    text-transform: capitalize;
+    font-weight: 700;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+  }
+  &:hover h3{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+  }
+}
+.mt-10{
+  margin-top: 10px;
+}
+
+
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+ h3{
+   top: 11rem;
+   right: 0rem;
+ }
+  p{
+    right: 0rem;
+    top: 13rem;
+  }
+  .top-box{
+    top: 32rem;
+  }
+  .p-box{
+    top: 34rem;
+  }
+}
+
+.products-box:hover .image {
+  opacity: 0.3;
+}
+
+.products-box:hover .middle {
+  opacity: 1;
+}
+
+.w-83{
+  width: 82.5rem;
+}

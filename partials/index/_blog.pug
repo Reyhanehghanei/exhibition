@@ -1,0 +1,10 @@
+.blog.container
+    div.row.col-md-12
+        div.line.position-relative
+            h4.text-center وبلاگ
+    div.article-card
+    .row.mt-4.py-2.blog-w
+        each item in categoryInfo
+            +article(item)
+    .btn-blog.d-flex.justify-content-center.mt-5
+

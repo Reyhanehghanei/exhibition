@@ -1,0 +1,134 @@
+/*
+TODO: adding some pages styles to this file, pages like blog detail or gallery detail
+      and some simple detail page.
+*/
+/*---------------------------------- fonts ----------------------------------*/
+/*---------------------------------- ellipsis ----------------------------------*/
+/*---------------------------------- line text ----------------------------------*/
+/*---------------------------------- text gradient ----------------------------------*/
+/*---------------------------------- glass effect ----------------------------------*/
+/*---------------------------------- card shadow ----------------------------------*/
+/*---------------------------------- font icon ----------------------------------*/
+/*---------------------------------- overlay ----------------------------------*/
+/*---------------------------------- border radius ----------------------------------*/
+/*---------------------------------- line ----------------------------------*/
+/*---------------------------------- background image ----------------------------------*/
+/*---------------------------------- scroll bar ----------------------------------*/
+/*---------------------------------- media query ----------------------------------*/
+/*---------------------------------- flex ----------------------------------*/
+/*---------------------------------- Second Language ----------------------------------*/
+.contact-us {
+  margin-top: 0;
+  margin-bottom: 9rem;
+}
+.contact-us iframe {
+  margin: 5% 0 !important;
+  border: none;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  box-shadow: 0 0 5px #e3e3e3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.contact-us__img {
+  margin: auto;
+  width: 400px;
+}
+@media only screen and (max-width: 575.98px) {
+  .contact-us__img {
+    width: 100%;
+  }
+}
+.contact-us__sub-title {
+  width: 100%;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.contact-us .main-btn {
+  padding: 13px 25px;
+  border-radius: 10px;
+  transition: all 300ms linear;
+}
+.contact-us .main-btn:hover {
+  background-color: #20673c;
+}
+.contact-us .main-btn__text {
+  font-size: 13.5px;
+  color: #fff !important;
+}
+
+.contact-info__title {
+  width: 100%;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.contact-info__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-flow: column;
+  font-size: 15px;
+}
+.contact-info__list-item {
+  color: #6e6e6e;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+}
+.contact-info__list-item:hover .contact-info__list-icon {
+  color: #419964;
+}
+.contact-info__list-text {
+  color: #1a1a1a;
+  margin: 0px;
+}
+.contact-info__list-text:hover {
+  color: #2c8e53;
+}
+.contact-info__list-icon {
+  font-size: 18px;
+  color: #2c8e53;
+  margin-left: 7px;
+  transition: all 300ms linear;
+}
+.contact-info .contact-social {
+  margin-top: 15px;
+}
+.contact-info .contact-social__text {
+  color: #333;
+  line-height: 1.9;
+}
+
+.social-media {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.social-media__icon {
+  padding: 5px;
+  font-size: 30px;
+  transition: all 300ms linear;
+}
+.social-media__item {
+  margin: 5px;
+}
+.social-media__item:first-child .social-media__icon {
+  padding-left: 0;
+}
+
+/*# sourceMappingURL=pages.css.map */

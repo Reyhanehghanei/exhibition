@@ -1,0 +1,309 @@
+nav.main-navbar {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  padding: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @media only screen and (max-width: 991.98px) {
+    position: fixed;
+    top: 0;
+    #{$right}: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: $main-nav-transition;
+
+    .main-nav {
+      background-color: $main-nav-background;
+      position: relative;
+      #{$right}: -100%;
+      height: 100%;
+      width: 70%;
+      white-space: nowrap;
+      flex-direction: column;
+      transition: $main-nav-transition;
+      transition-delay: $main-nav-transition-delay;
+      padding-top: 50px;
+      z-index: 101;
+
+      .sub-nav-wrapper {
+        position: relative;
+        display: none;
+        top: 0;
+        #{$right}: 0;
+        box-shadow: none;
+        padding-#{$right}: 25px;
+
+        &.wide-sm .sub-nav,
+        &.wide-md .sub-nav,
+        &.wide-lg .sub-nav {
+          width: auto;
+          flex-direction: column;
+          li {
+            min-width: 50%;
+          }
+        }
+      }
+
+      &__link {
+        color: #333;
+      }
+      .sub-nav__link {
+        color: black;
+      }
+    }
+  }
+  @media only screen and (max-width: 575.98px) {
+    .main-nav {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    #{$right}: 0;
+    .main-nav {
+      #{$right}: 0;
+      flex-direction: column;
+      overflow: auto;
+      flex-wrap: nowrap;
+    }
+    .navbar-overlay {
+      width: 100%;
+    }
+  }
+
+  .navbar-overlay {
+    position: absolute;
+    top: 0;
+    #{$right}: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 100;
+    transition: $main-nav-transition;
+  }
+
+} /* nav.main navbar */
+
+.main-nav {
+
+  li {
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+
+    .sub-nav-wrapper {
+      position: absolute;
+      top: 103%;
+      #{$right}: 0;
+      opacity: 0;
+      width: auto;
+      white-space: nowrap;
+      visibility: hidden;
+      border-radius: $main-nav-border-radius;
+      transform: $main-nav-hide-transform;
+      z-index: $main-nav-z-index;
+      box-shadow: $main-nav-box-shadow;
+      transition: $main-nav-transition;
+
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+        transform: $main-nav-show-transform;
+      }
+
+      .sub-nav-wrapper {
+        top: 0;
+        #{$right}: 100%;
+      }
+
+      &.wide-sm>.sub-nav {
+        width: 576px;
+        flex-direction: row;
+
+        li {
+          width: auto;
+          min-width: 33.33%;
+        }
+      }
+      &.wide-md>.sub-nav {
+        width: 768px;
+        flex-direction: row;
+
+        li {
+          width: auto;
+          min-width: 25%;
+        }
+      }
+      &.wide-lg {
+        position: fixed;
+        top: $main-nav-wide-top;
+        > .sub-nav {
+          width: 100%;
+          flex-direction: row;
+
+          li {
+            width: auto;
+            min-width: 20%;
+          }
+        }
+      }
+
+    } /* sub nav wrapper */
+
+  } /* main nav item */
+
+  &__link {
+    display: flex;
+    padding: 15px 10px;
+    color: $main-nav-link-color;
+    font-size: $main-nav-link-size;
+    font-weight: $main-nav-link-weight;
+    transition: $transition;
+    @media only screen and (min-width: 992px) {
+      &:hover {
+        color: $main-nav-active-link-color;
+        .icon-angle-left {
+          transform: rotate(calc(#{$ind}*90deg));
+        }
+      } /* main nav link hover */
+    }
+
+    &.active {
+      color: $main-nav-active-link-color;
+      font-weight: $main-nav-link-active-weight;
+    } /* main nav link active */
+
+    &.isShow {
+      .main-nav-icon {
+        transform: rotate(calc(#{$ind}*90deg));
+      }
+    }
+
+    &.logo {
+      img {
+        width: 60%;
+        margin: 0 auto;
+      } /* logo img */
+    } /* main nav link logo */
+
+    &__icon {
+      margin-#{$left}: 5px;
+      font-size: $main-nav-icon-size;
+    } /* main nav link icon */
+
+    i[class^='icon'] {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .main-nav-icon {
+      transition: $transition;
+      font-size: 8.5px;
+      margin-#{$right}: 5px;
+    } /* main nav link icon angle down */
+
+  } /* main nav link */
+
+  .sub-nav {
+    background-color: $sub-nav-background;
+    border-radius: $main-nav-border-radius;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+    } /* sub nav li */
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $sub-nav-link-color;
+      font-size: $sub-nav-link-size;
+      font-weight: $sub-nav-link-weight;
+      padding: 15px 20px;
+      min-width: $sub-nav-min-width;
+      transition: $main-nav-transition;
+      border-radius: $main-nav-border-radius;
+
+      i[class^="icon-angle"] {
+        margin-#{$right}: 3.5px;
+      }
+
+      &.isShow {
+        .main-nav-icon {
+          transform: rotate(calc(#{$ind}*90deg));
+        }
+      }
+
+      &:hover {
+        color: $sub-nav-link-hover-color;
+        background-color: darken($sub-nav-background, 10%);
+      } /* sub nav link hover */
+
+      .main-nav-icon {
+        transition: $main-nav-transition;
+      }
+
+    } /* sub nav link */
+
+  } /* main nav sub nav */
+
+
+} /* main nav*/
+.main-nav__link{
+  color: black !important;
+}
+.Proposal-a {
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 2;
+  border: 1px solid rgba(240, 248, 250, 0.25);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+  .icon-connect{
+    color: $bluee;
+    justify-content: center;
+    font-size: 18px;
+    height: 4px;
+     display: flex;
+    padding: 17px;
+    align-items: center;
+
+  }
+  .icon-connect-a{
+    border-radius: 3px;
+  }
+.icon-rdus{
+  border-radius: 24px 4px 2px 0px;
+}
+.icon-instagram-rd{
+  border-radius: 2px 24px 0px 1px;
+}
+.tel-header{
+p{
+  text-align: left;
+  font-size: 15px;
+  color: #2d2d85;
+  font-weight: 800;
+  line-height: 1;
+  font-family: "iranyekan";
+}
+}
+
+#scroll-up{
+  color: $bluee;
+}
